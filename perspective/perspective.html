@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Perspective</title>
+	<style>
+		div {
+			width: 100px;
+			height: 100px;
+			margin-bottom: 5px;
+		}
+
+		#div0 {
+			perspective: 100px;
+			perspective-origin: 50% 50%;
+		}
+
+		#div2 {
+			perspective: 100px;
+			perspective-origin: 20% 20%;
+		}
+
+
+		#div1 {
+			background: blue;
+			transform: rotateX(45deg);
+		}
+
+		#div3 {
+			background: red;
+			transform: rotateX(45deg);
+		}
+	</style>
+</head>
+<body>
+	
+	<h1>Perspective</h1>
+	<div id="div0">
+		<div id="div1"></div>
+	</div>
+
+	<div id="div2">
+		<div id="div3"></div>
+	</div>
+
+</body>
+</html>
+<!-- hanya pada 3d elemen
+	 efek pada child bkn elemen itu sendiri -->

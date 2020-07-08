@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.kotak {
+			width: 100px;
+			height: 100px;
+			background-color: salmon;
+			transition: margin-left 1s;
+			/*margin-left diatas adalah yang akan di transisikan*/
+		}
+
+		.container {
+			width: 900px;
+			margin: 10px auto;
+			border: 5px solid black;
+		}
+
+		.container:hover .kotak {
+			transform: rotate(720deg);
+			margin-left: 800px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="kotak"></div>
+	</div>
+
+</body>
+</html>
+<!-- syntax transition = transition: [properti] <durasi> [fungsi] [delay] 
+satuan durasi s/ms-->
+
+<!-- tidak semua bisa di transisi -->

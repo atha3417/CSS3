@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>transition</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.kotak {
+			width: 100px;
+			height: 100px;
+			background-color: salmon;
+			text-align: center;
+			line-height: 100px;
+			margin: 5px;
+			transition: margin-left 3s, transform 3s 2s, background-color 2s 3s;
+			/*value yang kedua adalah delay*/
+			/*value kedua adalah durasi*/
+			/*value pertama adalah yg akn ditransisi*/
+		}
+
+		.container {
+			width: 900px;
+			margin: 10px auto;
+			border: 5px solid black;
+		}
+
+		.container:hover .kotak {
+			transform: rotate(720deg);
+			margin-left: 800px;
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<div class="kotak kotak1">ease</div>
+	</div>
+
+</body>
+</html>
+<!-- ease
+ease-in
+ease-out
+ease-in-out
+linear
+cubic-bezier (w, x, y, x, z) -->

@@ -1,0 +1,176 @@
+/* font */
+@fontface {
+	font-family: 'BebasNeue';
+	src: url(../fonts/bebasneue-regular-webfont.woff) format('woff');
+}
+
+/* style utama*/
+body {
+	font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
+	background-color: #ddd;
+}
+
+h1 {
+	font-size: 80px;
+	margin: 50px 0;
+	text-align: center;
+	text-shadow: 1px 1px 1px white;
+}
+
+.container {
+	width: 600px;
+	background-color: white;
+	margin: auto;
+	padding: 20px;
+	box-shadow: 0 0 3px 3px rgba(0,0,0,.3);
+	border-radius: 5px;
+}
+
+.gallery li {
+	width: 120px;
+	height: 120px;
+	overflow: hidden;
+	border: 3px solid #666;
+	float: left;
+	margin-right: 24px;
+	position: relative;
+}
+
+.gallery li, .gallery .bdrs, .gallery span {
+	border-radius: 50%;
+}
+
+.gallery li span {
+	display: block;
+	width: 120px;
+	height: 120px;
+	background-color: rgba(200,200,200,.5);
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 120px;
+	color: #333;
+	text-shadow: 1px 1px 1px #ddd;
+	opacity: 0;
+	transform: scale(0) rotate(0);
+	transition: .5s;
+}
+
+.gallery li a:hover span {
+	opacity: 1;
+	transform: scale(1) rotate(360deg);
+}
+
+.clear {
+	clear: both;
+}
+
+/* Overlay */
+.overlay {
+	width: 0;
+	height: 0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0);
+	z-index: 9999;
+	transition: .8s;
+	text-align: center;
+	padding: 100px 0;
+}
+
+.overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,.6);
+}
+
+.overlay img {
+	max-height: 100%;
+	box-shadow: 2px 2px 7px rgba(0,0,0,.5);
+}
+
+.overlay:target img {
+	animation: zoomdanfade 1s;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 50px;
+	left: 50%;
+	margin-left: -25px;
+	color: white;
+	text-decoration: none;
+	background-color: black;
+	border: 1px solid white;
+	line-height: 14px;
+	padding: 2px;
+	opacity: 0;
+}
+
+.overlay .close:hover {
+	padding: 3
+}
+
+.overlay:target .close {
+	animation: slidedownfade .5s .5s forwards;
+}
+
+.overlay:target .next, .overlay:target .prev {
+	animation: fade .5s .5s forwards;
+}
+
+/* navigasi */
+.next, .prev {
+	width: 57px;
+	height: 93px;
+	background-image: url(../img/next.png);
+	position: absolute;
+	text-indent: -9999px;
+	top: 40%;
+	margin-left: 60px;
+	opacity: 0;
+}
+
+.prev {
+	background-image: url(../img/previous.png);
+	margin-left: -100px;
+}
+
+/* animasi */
+@keyframes zoomdanfade {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes slidedownfade {
+	0% {
+		opacity: 0;
+		margin-top: -20px;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

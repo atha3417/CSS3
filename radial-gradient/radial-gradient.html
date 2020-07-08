@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Gradients</title>
+	<style>
+		div {
+			background-image: radial-gradient(circle closest-side, red, blue);
+		}
+	</style>
+</head>
+<body>
+	
+	<div></div>
+
+</body>
+</html>
+<!-- syntax sederhana 
+background-image: radial-gradient(<warna awal>, <warna akhir>);
+ket : 
+bisa byk warna -->
+<!-- syntax lengkap
+radial-gradient(
+	<tipe> <jangkauan> at <posisi-y>, <posisi-x>,
+	<warna-1>,
+	<warna-2>,
+	...,
+	<warna-n>
+); 
+tipe ada ellipse(default) dan circle 
+jangkauan adalah jarak pusat gradient ke sisi terluarnya
+macam jangkauan 
+-closest-corner(jarak dr pusat gradient ke SUDUT TERDEKAT elemen)
+-closest-side(jarak dr pusat gradient ke SISI TERDEKAT elemen)
+-farthest-corner(jarak dr pusat gradient ke SUDUT TERJAUH elemen)
+-farthest-side(jarak dr pusat gradient ke SISI TERJAUH elemen) 
+jarak terdekat adalah atas / bwh
+jarak terjauh adalah kanan / kiri
+posisi-y ada 
+-top
+-center
+-bottom
+-px
+posisi-x ada
+-left
+-center
+-right
+-px -->
